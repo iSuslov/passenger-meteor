@@ -5,7 +5,7 @@ MAINTAINER Ivan Suslov <digitalzuzel@gmail.com>
 RUN NODE_VERSION=0.10.44 && NODE_ARCH=x64 \
         && apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 561F9B9CAC40B2F7 \
         && apt-get update \
-        && apt-get install -y wget apt-transport-https ca-certificates \
+        && apt-get install -y wget cups apt-transport-https ca-certificates \
         && sh -c 'echo deb https://oss-binaries.phusionpassenger.com/apt/passenger trusty main > /etc/apt/sources.list.d/passenger.list' \
         && apt-get update \
         && apt-get install -y nginx-extras passenger build-essential libssl-dev git python rpl \

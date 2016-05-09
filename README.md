@@ -7,6 +7,7 @@ Docker image for meteor passenger. Runs meteor in production mode only and does 
  * Latest Phusion Passenger (5.0.28 as for 09 May 2016)
  * Node v0.10.44
  * Everything else you need to run meteor (phantomjs not included)
+ * CUPS (Common Unix Printing Server)
 
 ## Needed from you:
 * Unpackaged meteor bundle.
