@@ -33,12 +33,16 @@ server {
     passenger_app_type node;
     passenger_startup_file main.js;
 
+    # Meteor needs sticky sessions
+    passenger_sticky_sessions on;
+
     # Tell your app where MongoDB is
     passenger_env_var MONGO_URL mongodb://mongoserver:27017/myappdb;
     # Tell your app what its root URL is
     passenger_env_var ROOT_URL http://yourserver.com;
 }
 ```
+[Full passenger+nginx property reference](https://www.phusionpassenger.com/library/config/nginx/reference)
 
 ## Important
 Notice how `root` property is defined inside the config file. Passenger needs `public` folder. You should define this property exactly like this, with the exception that `my_app_name` folder can have any name. Don't worry, this docker image will create `public` folder inside unpacked meteor bundle automatically. It will also install all `npm` dependencies. 
