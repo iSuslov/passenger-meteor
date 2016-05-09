@@ -22,7 +22,7 @@ RUN NODE_VERSION=0.10.44 && NODE_ARCH=x64 \
 RUN rpl '# passenger_root' 'passenger_root' /etc/nginx/nginx.conf \
         && rpl '# passenger_ruby' 'passenger_ruby' /etc/nginx/nginx.conf \
         && apt-get update \
-        && apt-get upgrade
+        && apt-get upgrade -y
 
 
 COPY ./init-apps.sh /
