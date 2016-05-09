@@ -41,6 +41,9 @@ server {
     passenger_env_var MONGO_URL mongodb://mongoserver:27017/myappdb;
     # Tell your app what its root URL is
     passenger_env_var ROOT_URL http://yourserver.com;
+    
+    # Meteor settings json, if exists
+    passenger_env_var METEOR_SETTINGS '{"your JSON": "goes here"}';
 }
 ```
 [Full passenger+nginx property reference](https://www.phusionpassenger.com/library/config/nginx/reference)
